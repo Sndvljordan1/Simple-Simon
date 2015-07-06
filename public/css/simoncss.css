@@ -1,0 +1,117 @@
+
+#diamond {width: 0;
+	height: 0;
+	border: 300px solid transparent;
+	border-bottom-color: black;
+	position: relative;
+	top: -300px;
+	left: 300px;
+}
+#diamond:after {
+	content: '';
+	position: absolute;
+	left: -300px;
+	top: 300px;
+	width: 0;
+	height: 0;
+	border: 300px solid transparent;
+	border-top-color: black;
+	z-index: -1;
+}
+
+#triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 125px solid transparent;
+	border-right: 125px solid transparent;
+	border-bottom: 150px solid red;
+	position: relative;
+	left: -125px;
+	top: 5px;
+}
+#triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 125px solid transparent;
+	border-right: 125px solid transparent;
+	border-top: 150px solid blue;
+	position: relative;
+	right: 125px;
+	top: -205px;
+}
+#triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 125px solid transparent;
+	border-right: 150px solid lawngreen;
+	border-bottom: 125px solid transparent;
+	position: relative;
+	left: -295px;
+	top: 25px;
+}
+#triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 125px solid transparent;
+	border-left: 150px solid yellow;
+	border-bottom: 125px solid transparent;
+	position: relative;
+	top: -225px;
+	left: 145px;
+}
+  .active{
+	opacity: 0.5;
+}
+
+#space-invader{
+
+  box-shadow:
+    0 0 0 1em salmon,
+    0 1em 0 1em salmon,
+    -2.5em 1.5em 0 .5em salmon,
+    2.5em 1.5em 0 .5em salmon,
+    -3em -3em 0 0 salmon,
+    3em -3em 0 0 salmon,
+    -2em -2em 0 0 salmon,
+    2em -2em 0 0 salmon,
+    -3em -1em 0 0 salmon,
+    -2em -1em 0 0 salmon,
+    2em -1em 0 0 salmon,
+    3em -1em 0 0 salmon,
+    -4em 0 0 0 salmon,
+    -3em 0 0 0 salmon,
+    3em 0 0 0 salmon,
+    4em 0 0 0 salmon,
+    -5em 1em 0 0 salmon,
+    -4em 1em 0 0 salmon,
+    4em 1em 0 0 salmon,
+    5em 1em 0 0 salmon,
+    -5em 2em 0 0 salmon,
+    5em 2em 0 0 salmon,
+    -5em 3em 0 0 salmon,
+    -3em 3em 0 0 salmon,
+    3em 3em 0 0 salmon,
+    5em 3em 0 0 salmon,
+    -2em 4em 0 0 salmon,
+    -1em 4em 0 0 salmon,
+    1em 4em 0 0 salmon,
+    2em 4em 0 0 salmon;
+
+    background: salmon;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    position: relative;
+    left: 528px;
+    top: -425px;
+
+    margin: 50px 0 70px 65px;
+  }
+  #square {
+	width: 175px;
+	height: 175px;
+	background: clear;
+	position: relative;
+	left: 515px;
+	top: -565px;
+}
