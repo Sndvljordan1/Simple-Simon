@@ -1,4 +1,9 @@
-
+#round{
+	font-size: 40px;
+	position: relative;
+	left: 200px;
+	top: 50px;
+}
 #diamond {width: 0;
 	height: 0;
 	border: 300px solid transparent;
