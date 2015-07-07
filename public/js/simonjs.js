@@ -33,5 +33,6 @@ $('.triangle').click(function(e){
 
 $('#square').click(function(e){
     alert("Get Ready!");
+    // $('#space-invader').fadeToggle();
     
 });
