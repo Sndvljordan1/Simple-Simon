@@ -36,3 +36,46 @@ $('#square').click(function(e){
     // $('#space-invader').fadeToggle();
     
 });
+
+
+
+
+
+
+
+$(document).ready(function(){
+    var konamiCode = "38,38,40,40,37,39,37,39,66,65,13";
+    var code = [];
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+        code.push(event.keyCode);
+        if (code.toString().indexOf(konamiCode) >= 0){
+            $('body').css('color', 'chartreuse');
+            $('body').css('background-color', 'black');
+
+
+var board = ['1','2','3','4'];
+var game = [];
+var random = Math.floor((Math.random()*5)+1);
+
+game.push(random)
+var up = $('#up')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
