@@ -4,7 +4,8 @@
 	left: 200px;
 	top: 50px;
 }
-#diamond {width: 0;
+#diamond {
+	width: 0;
 	height: 0;
 	border: 300px solid transparent;
 	border-bottom-color: black;

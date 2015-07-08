@@ -4,6 +4,12 @@ var userIndex = 0;
 var gameSequence = [];
 
 
+//allow sound to be played 
+function playSound(sound){
+    document.getElementById('' + sound).play();
+}
+
+
 //allow user input to have value
 $('.triangle').click(function(e){
     var triangleClicked = $(this).attr('id');
@@ -15,13 +21,16 @@ $('.triangle').click(function(e){
             userIndex = 0;
         }
     } else {
-            alert("Game Over");
-            location.reload(true);
+        playSound('fail');
+        alert("Game Over");
+        location.reload(true);
     }
 });
 //initiate game
 $('#square').click(function(e){
     alert("Hi! I'm Simon! Let's play a game! Get Ready!")
+    playSound('start');
+    gameSequence = [];
     getRandomTriangle();
     playGame();
 });
@@ -50,7 +59,7 @@ function getRandomTriangle() {
 function playGame(){
     var i=0;
     var intervalId = setInterval(function(){
-        if(i>=gameSequence.length){
+        if(i >= gameSequence.length){
             clearInterval(intervalId);
         }
         animateTriangle(gameSequence[i]);
@@ -58,31 +67,23 @@ function playGame(){
     },500);
 }
 
-
-
-
-//compare input in each
-// function compareArrays() {
-//     var sequenceMistake = false;
-//     // check if simon and user arrays are the same
-//     for (var i = 0; i < userInput.length; i++) {
-//         // if they are not the same change sequenceMistake var to true and call game over funtion, else if they are the same call copy function and go another round 
-//       if (gameSequence[i] != userInput[i]) {
-//         sequenceMistake = true;
-//         break;
-//       }
-//     }
-//     if (sequenceMistake) {
-//       alert("Game Over");
-//       location.reload(true)
-//     } else if (userInput.length == gameSequence.length) {
-//       copy();
-//     }
-// }
-
-
+//tells game to take new turn
 function copy() {
+    playSound('moveOn');
     getRandomTriangle();
-    $('#round').text('Round: '+ gameSequence.length);
     playGame();
+    $('#round').text('Round: '+ gameSequence.length);
 }
+
+//page audio
+(function(){
+    var konamiCode = "38,38,40,40,37,39,37,39,66,65,13";
+    var code = [];
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+        code.push(event.keyCode);
+        if (code.toString().indexOf(konamiCode) >= 0){
+            playSound('woot');
+        }
+    })
+})();
